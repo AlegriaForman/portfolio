@@ -1,31 +1,51 @@
 body {
-  background-color: #7DA2A0;
-  background-size: cover;
+  background-color: #87CEEB;
 }
 
 h2 {
   font-family: 'Josefin Slab', serif;
   font-size: 1.95em;
-  color: white;
+  color: black;
   margin-bottom: .4em;
+  padding-left: 30px;
 }
 
 p {
   font-family: 'Josefin Slab', serif;
   font-size: 1.1em;
-  color: white;
+  color: black;
   margin-left: 1em;
   margin-top: .4em;
 }
 
 li {
-  color: white;
+  color: black;
   font-size: .95em;
 }
 
 #pic {
   width: 85px;
   height: 127px;
-  float: right;
-  margin-top: -45px;
+  border-radius: 30px;
+  margin-left: 60px;
+}
+
+#skills #contact {
+  padding-top: 10px;
+}
+
+a {
+  text-decoration: none;
+}
+span {
+  font-size: 1.5em;
+  color: blue;
+  text-decoration: underline;
+}
+
+body {
+  background-image: url('images/background2.png');
+  background-repeat: no-repeat;
+  background-position: 500px 500px;
+  background-size: 30%;
 }
