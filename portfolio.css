@@ -1,45 +1,36 @@
 body {
   background-color: #87CEEB;
-}
-
-h2 {
   font-family: 'Josefin Slab', serif;
-  font-size: 1.95em;
   color: black;
-  margin-bottom: .4em;
-  padding-left: 30px;
 }
 
+header {
+  display: flex;
+  flex-direction: row;
+  margin: 0;
+  text-align: center;
+  color: black;
+}
 p {
-  font-family: 'Josefin Slab', serif;
-  font-size: 1.1em;
-  color: black;
-  margin-left: 1em;
-  margin-top: .4em;
+  padding-top: 10px;
 }
 
-li {
-  color: black;
-  font-size: .95em;
+.tab {
+  list-style-type: none;
 }
 
 #pic {
-  width: 85px;
-  height: 127px;
-  border-radius: 30px;
-  margin-left: 60px;
-}
-
-#skills #contact {
-  padding-top: 10px;
+  float: left;
+  padding-left: 10px;
+  padding-right: 10px;
 }
 
 a {
   text-decoration: none;
 }
 span {
-  font-size: 1.5em;
-  color: blue;
+  font-size: 1.25em;
+  color: black;
   text-decoration: underline;
 }
 
@@ -49,3 +40,70 @@ body {
   background-position: 500px 500px;
   background-size: 30%;
 }
+
+/* phones (portrait and landscape) ----------- */
+@media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+header {
+  display: flex;
+  flex-direction: row;
+  margin: 0;
+  text-align: center;
+  color: black;
+}
+h1 {
+  font-size: 2.8em;
+}
+
+nav {
+  list-style-type: none;
+}
+body {
+  background-image: url('images/background2.png');
+  background-repeat: no-repeat;
+  background-position: 400px 900px;
+  background-size: 20%;
+}
+li {
+  color: black;
+  font-size: 1em;
+  padding: 0;
+}
+p #skills #contact {
+  font-size: .8em;
+  padding-top: 10px;
+}
+}
+
+/* tablet (portrait and landscape) ----------- */
+@media only screen and (min-device-width : 481px) and (max-device-width : 767px) {
+header {
+  display: flex;
+  flex-direction: row;
+  margin: 0;
+  text-align: center;
+  color: black;
+}
+h1 {
+  font-size: 2.8em;
+}
+
+nav {
+  list-style-type: none;
+}
+body {
+  background-image: url('images/background2.png');
+  background-repeat: no-repeat;
+  background-position: 400px 900px;
+  background-size: 20%;
+}
+li {
+  color: black;
+  font-size: 1.5em;
+  padding: 0;
+}
+p #skills #contact {
+  font-size: 1.5em;
+  padding-top: 10px;
+}
+}
+

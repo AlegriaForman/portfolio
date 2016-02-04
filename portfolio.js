@@ -1,12 +1,20 @@
+$('#about').hide();
+
+$('nav').on('click', function(e) {
+$('#about').slideToggle();
+$('#skills').hide();
+$('#contact').hide();
+});
+
 $('#skills').hide();
 
-$('#my-skills').on ('click', function() {
+$('#my-skills').on('click', function() {
 $('#skills').slideToggle();
 });
 
 $('#contact').hide();
 
-$('#my-contact').on ('click', function() {
+$('#my-contact').on('click', function() {
 $('#contact').slideToggle();
 });
 
