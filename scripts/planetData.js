@@ -1,20 +1,27 @@
 var planetData = [
   {
-    name:       'jupiter',
-    imageUrl:   '/Users/Ali4Man/301/portfolio/planets/jupiter.png',
-  {
-    name:       'jupiter',
-    imageUrl:   '/Users/Ali4Man/301/portfolio/planets/jupiter1.png',
+    name:       'Jupiter',
+    image:   'planets/jupiter.png',
+    quote: 'Some quote.'
   },
   {
-    name:       'jupiter',
-    imageUrl:   '/Users/Ali4Man/301/portfolio/planets/render_io.png',
+    name:       'Jupiter1',
+    image:   'planets/jupiter1.png',
+    quote: 'Some quote.'
   },
   {
-    name:       'jupiter',
-    imageUrl:   '/Users/Ali4Man/301/portfolio/planets/the_red_planet.png',
+    name:       'Render',
+    image:   'planets/render_io.png',
+    quote: 'Some quote.'
   },
   {
-    name:       'jupiter',
-    imageUrl:   '/Users/Ali4Man/301/portfolio/planets/unnamed.png',
+    name:       'Red Planet',
+    image:   'planets/the_red_planet.png',
+    quote: 'Some quote.'
+  },
+  {
+    name:       'Unnamed',
+    image:   'planets/unnamed.png',
+    quote: 'Some quote.'
   }
+];

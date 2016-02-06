@@ -14,11 +14,6 @@ p {
   font-size: 1.1em;
 }
 
-.tab {
-  list-style-type: none;
-  display: inline-block;
-}
-
 h1 {
   text-align: center;
   font-size: 120%;
@@ -30,30 +25,9 @@ a {
   font-size: .8em;
 }
 
-.clearfix {
-  clear: both;
-}
-
-div>img {
-  margin-left: 35%;
-  width: 30%;
-  height: auto;
-}
 footer {
   font-size: 1.5em;
-}
-
-#burger {
-  font-size: 200px;
-  position: absolute;
-}
-
-#pic {
-  align-items: center;
-  border-radius: 35px;
-}
-#pic.expand {
-  width: 6.5em;
+  position: 400px 200px;
 }
 
 ul {
@@ -62,66 +36,89 @@ ul {
   text-align: center;
 }
 
+.clearfix {
+  clear: both;
+}
+
 .main-nav li {
-    font-size: 1.5em;
-    padding: .2em .2em;
-}
-/*phones (portrait and landscape) -----------
-@media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
-header {
-  text-align: center;
-  color: black;
-}
-h1 {
-  font-size: 2.8em;
+  display: block;
+  font-size: 1.5em;
+  padding: .2em .2em;
 }
 
-nav {
-  list-style-type: none;
+.main-nav ul {
+  display: none;
 }
-body {
-  background-image: url('images/background2.png');
-  background-repeat: no-repeat;
-  background-position: 400px 900px;
-  background-size: 20%;
+
+.main-nav:hover ul {
+  display: block;
+  padding: 0;
+  list-style: none;
 }
-li {
-  color: white;
+
+#pic {
+  align-items: center;
+  border-radius: 35px;
+}
+
+#pic.expand {
+  width: 6.5em;
+}
+
+#planet {
   font-size: 1em;
-  padding: 0;
-}
-p #skills #contact {
-  font-size: .8em;
-  padding-top: 10px;
-}
+  width: 25%;
+  margin-left: 37%;
+  display: inline-block;
 }
 
-/* tablet (portrait and landscape) -----------
-@media only screen and (min-device-width : 481px) and (max-device-width : 767px) {
-header {
-  text-align: center;
-  color: black;
-}
-h1 {
-  font-size: 2.8em;
+#hamburger-bun {
+  position: absolute;
+  z-index: 99999;
+  top: 0;
+  width: 60px;
+  right: 5px;
+  top: 140px;
+  outline: 2px white;
 }
 
-nav {
-  list-style-type: none;
+#burger {
+  padding: 0 0 80px 0;
 }
-body {
-  background-image: url('images/background2.png');
-  background-repeat: no-repeat;
-  background-position: 400px 900px;
-  background-size: 20%;
+
+#planet-div {
+  display: inline-block;
 }
-li {
-  color: white;
-  font-size: 1.5em;
-  padding: 0;
-}
-p #skills #contact {
-  font-size: 1.5em;
-  padding-top: 10px;
-}
+
+@media only screen and (min-width: 640px) {
+  .main-nav ul {
+    display: inline-block;
+    padding: 0;
+    margin: 0;
+  }
+  .main-nav li {
+    display: inline;
+  }
+
+  #hamburger-bun {
+    display: none;
+  }
+
+@media only screen and (min-width: 768px) {
+
+  .main-nav ul {
+    display: block;
+    padding: 0;
+    margin: 0;
+  }
+  .main-nav li {
+    display: inline-block;
+    padding-left: .6em;
+    border: solid;
+    margin: 0 1px 0 0;
+  }
+
+  .main-nav li a {
+    padding: 0 2px;
+  }
 }
