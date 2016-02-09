@@ -1,12 +1,11 @@
 var aboutArr = [];
+var skillsArr = [];
 var contactArr = [];
 
 function Pics (opts) {
   this.name = opts.name;
   this.image = opts.image;
 }
-
-Pics.skillsPicture = [];
 
 Pics.prototype.aboutPics = function () {
   var template = Handlebars.compile($('#about-template').text());
@@ -23,41 +22,6 @@ Pics.prototype.contactPics = function () {
   return template(this);
 };
 
-Pics.loadSkillsPics = function(rawData) {
-  rawData.forEach(function(ele) {
-  Pics.skillsPicture.push(new Pics(ele));
-});
-};
-
-Pics.getSkillsPics = function(){
-  $.getJSON('/scripts/skills.json', function(data){
-    localStorage.rawData = JSON.stringify(data);
-    Pics.loadSkillsPics(data);
-    contentView.initPortfolio();
-  });
-};
-
-Pics.fetchSkillsPics = function(){
-  if (localStorage.rawData) {
-    $.ajax ({
-      url: '/scripts/skills.json',
-      type: 'HEAD',
-      success: function(data, message, xhr){
-        console.log(xhr);
-        var eTag = xhr.getResponseHeader('eTag');{
-        if (!localStorage.eTag || eTag !== localStorage.eTag) {
-          localStorage.eTag = eTag;
-        } else {}
-          Pics.loadSkillsPics(JSON.parser(localStorage.rawData));
-          contentView.initPortfolio();
-        }
-      }
-    });
-} else {
-  Pics.getSkillsPics();
-}
-};
-
 aboutData.forEach(function(ele) {
   aboutArr.push(new Pics(ele));
 });
@@ -66,13 +30,13 @@ aboutArr.forEach(function (a) {
   $('#about-div').append(a.aboutPics());
 });
 
-/*skillsData.forEach(function(ele) {
+skillsData.forEach(function(ele) {
   skillsArr.push(new Pics(ele));
 });
 
 skillsArr.forEach(function (a) {
   $('#skills-div').append(a.skillsPics());
-});*/
+});
 
 contactData.forEach(function(ele) {
   contactArr.push(new Pics(ele));
