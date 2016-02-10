@@ -10,22 +10,22 @@ Pics.skillsPicture = [];
 
 Pics.prototype.aboutPics = function () {
   var template = Handlebars.compile($('#about-template').text());
-  return template(this);
+    return template(this);
 };
 
 Pics.prototype.skillsPics = function () {
   var template = Handlebars.compile($('#skills-template').text());
-  return template(this);
+    return template(this);
 };
 
 Pics.prototype.contactPics = function () {
   var template = Handlebars.compile($('#contact-template').text());
-  return template(this);
+    return template(this);
 };
 
 Pics.loadSkillsPics = function(rawData) {
-  rawData.forEach(function(ele) {
-  Pics.skillsPicture.push(new Pics(ele));
+  Pics.skillsPicture = rawData.map(function(ele) {
+    return new Pics(ele);
 });
 };
 
@@ -48,7 +48,7 @@ Pics.fetchSkillsPics = function(){
         if (!localStorage.eTag || eTag !== localStorage.eTag) {
           localStorage.eTag = eTag;
         } else {}
-          Pics.loadSkillsPics(JSON.parser(localStorage.rawData));
+          Pics.loadSkillsPics(JSON.parse(localStorage.rawData));
           contentView.initPortfolio();
         }
       }
@@ -65,14 +65,6 @@ aboutData.forEach(function(ele) {
 aboutArr.forEach(function (a) {
   $('#about-div').append(a.aboutPics());
 });
-
-/*skillsData.forEach(function(ele) {
-  skillsArr.push(new Pics(ele));
-});
-
-skillsArr.forEach(function (a) {
-  $('#skills-div').append(a.skillsPics());
-});*/
 
 contactData.forEach(function(ele) {
   contactArr.push(new Pics(ele));

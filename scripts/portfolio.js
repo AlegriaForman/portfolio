@@ -1,10 +1,11 @@
-/*contentView = {};
+(function(module){
+contentView = {};
 
 contentView.initPortfolio = function(){
   Pics.skillsPicture.forEach(function(a){
       $('#skills-div').append(a.skillsPics());
   });
-};*/
+};
 
 $('#about-div').hide();
 $('#skills-div').hide();
@@ -39,3 +40,4 @@ $('#my-contact').on('click', function() {
   $('#skills-div').hide();
   $('#contact-div').fadeIn();
 });
+})(window);
