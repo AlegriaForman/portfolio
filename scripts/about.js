@@ -1,14 +1,14 @@
 var aboutData = [
   {
-    name: 'olympics',
-    image: 'planets/olympics.jpeg',
+    name: 'Rainier',
+    image: '/images/rainier2.jpeg',
   },
   {
-    name: 'unnamed',
-    image: 'planets/unnamed.png',
+    name: 'Einstein',
+    image: '/images/Einstein.jpg',
   },
   {
     name: 'Renoir',
-    image: 'planets/Renoir.jpeg',
+    image: '/images/Renoir.jpeg',
   }
 ];

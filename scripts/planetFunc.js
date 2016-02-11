@@ -47,6 +47,7 @@ Pics.fetchSkillsPics = function(){
         var eTag = xhr.getResponseHeader('eTag');{
         if (!localStorage.eTag || eTag !== localStorage.eTag) {
           localStorage.eTag = eTag;
+          localStorage.clear();
         } else {}
           Pics.loadSkillsPics(JSON.parse(localStorage.rawData));
           contentView.initPortfolio();

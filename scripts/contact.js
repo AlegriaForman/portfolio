@@ -1,14 +1,14 @@
 var contactData = [
   {
-    name: 'Helen',
-    image: 'planets/Helen.jpeg',
+    name: 'Rainier',
+    image: '/images/rainier1.jpeg',
   },
   {
-    name: 'Jupiter1',
-    image: 'planets/jupiter1.png',
+    name: 'Einstein',
+    image: '/images/Aristotle.jpeg',
   },
   {
-    name: 'Monet',
-    image: 'planets/Monet.jpeg',
+    name: 'Renoir',
+    image: '/images/Renoir1.jpeg',
   }
 ];
