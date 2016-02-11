@@ -1,14 +1,14 @@
 [
   {
     "name": "CraterLake",
-    "image": "/planets/CraterLake.jpeg"
+    "image": "/images/CraterLake.jpeg"
   },
   {
-    "name": "Render",
-    "image": "/planets/render_io.png"
+    "name": "Dalai Lama",
+    "image": "/images/Dalai-Lama.jpeg"
   },
   {
     "name": "VanGogh",
-    "image": "/planets/VanGogh.jpeg"
+    "image": "/images/VanGogh.jpeg"
   }
 ]
