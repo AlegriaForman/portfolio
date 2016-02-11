@@ -2,22 +2,25 @@
 <html>
   <head>
     <meta charset='UTF-8'>
-    <title>Ali's About Blog</title>
+    <title>Ali's portfolio</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="styles/normalize.css">
-    <link rel="stylesheet" href="styles/portfolio.css">
+    <link rel="stylesheet" href="styles/vendor/normalize.css">
+    <link rel="stylesheet" href="styles/base.css">
+    <link rel="stylesheet" href="styles/layout.css">
     <link href='https://fonts.googleapis.com/css?family=Poiret+One|Josefin+Slab' rel='stylesheet' type='text/css'>
-
+<!--Handlebars for About nav-->
     <script id="about-template" type="text/x-handlebars-template">
       <span class="clearfix" data-image="{{image}}">
         <img id="about-Temp" src="{{image}}">
       </span>
     </script>
+<!--Handlebars for Skill nav-->
     <script id="skills-template" type="text/x-handlebars-template">
       <span class="clearfix" data-image="{{image}}">
         <img id="skills-Temp" src="{{image}}">
       </span>
     </script>
+<!--Handlebars for Contact nav-->
     <script id="contact-template" type="text/x-handlebars-template">
       <span class="clearfix" data-image="{{image}}">
         <img id="contact-Temp" src="{{image}}">
@@ -26,13 +29,15 @@
   </head>
   <body>
     <header class="clearfix">
-    <section class="head">
-        <h1>Alegria "Ali" Forman || Full Stack Developer</h1>
-        <img id="pic" src="images/23.jpg" class="expand">
-      </section>
-  </header>
-    <nav class="main-nav">
-      <div id="hamburger-bun"> <img id="burger" src="images/hamburger.png"></div>
+     <section class="head">
+      <h1>Alegria "Ali" Forman || Full Stack Developer</h1>
+      <img id="pic" src="images/23.jpg" class="expand">
+     </section>
+   </header>
+
+<!--Main nav-->
+   <nav class="main-nav">
+    <div id="hamburger-bun"> <img id="burger" src="images/hamburger.png"></div>
       <ul>
         <li class="tab"><a href="#" id="my-about">About</a></li>
         <li class="tab"><a href="#" id="my-skills"> Skills</a></li>
@@ -40,7 +45,8 @@
           <span><a href="http://timali4man.com/MuseConcert.html" target="_blank">Muse Concert</a></span></li>
         <li class="tab"><a href="#" id="my-contact">Contact</a></li>
       </ul>
-    </nav>
+  </nav>
+<!--About info-->
   <section id="about">
     <p>
       I am a full-stack web developer student at Code Fellows based in Seattle.
@@ -53,7 +59,7 @@
       Hurricane Ridge. I am an avid fan of Oscar Wilde.
     </p>
   </section>
-
+<!--Skills info-->
   <section id="skills">
     <p>
       <ul id="language" style="list-style-type:none">
@@ -64,7 +70,7 @@
       </ul>
     </p>
   </section>
-
+<!--Contact info-->
   <section id="contact">
     <ul>
       <li>Email:aforman@gmail.com</li>
@@ -73,10 +79,10 @@
         <img src="images/twitter_followers.png"> AliForman@PerfectMay</img></a></li>
     </ul>
   </section>
+<!--Insertion of images-->
   <span id="about-div"></span>
   <span id="skills-div"></span>
   <span id="contact-div"></span>
-    <footer>
      <p>&copy;ali</p>
     </footer>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
