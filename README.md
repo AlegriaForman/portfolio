@@ -1,4 +1,6 @@
 # portfolio
-class-02. Added more jQuery methods, changed the background color, etc.
-
-class-03. Added more jQuery methods, integrate responsive design.  Used @media queries and flexbox but need some polishing.
+class-08
+- deleted portfolio.css and creat base and layout.
+- enhance the RWD.
+- deleted, added and formatted some images.
+- deleted and moved js, css and images folders and files.
