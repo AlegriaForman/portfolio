@@ -1,0 +1,17 @@
+[
+  {
+    "name": "About",
+    "body": "I am a full-stack web developer student at Code Fellows based in Seattle. I have done various projects from creating websites and games. Find out how I can assist you with your business and contact me.<br>I like to travel, go for hikes, fond of sports, adore realist and impressionist paintings and enjoy reading classic books. Previously hiked Hurricane Ridge. I am an avid fan of Oscar Wilde.",
+    "image": "<span>/images/rainier2.jpeg</span><span>/images/Einstein.jpg</span><span>/images/Renoir.jpeg</span>"
+  },
+  {
+    "name": "Skills",
+    "body":"<ul><li>&#10003 HTML5</li><li>&#10003 CSS/Sass</li><li>&#10003 Javascript/JQuery/JSON/Ajax</li><li>&#10003 SQL</li></ul>",
+    "image": "<span>/images/CraterLake.jpeg</span><span>/images/Dalai-Lama.jpeg</span><span>/images/VanGogh.jpeg</span>"
+  },
+  {
+    "name": "Contact",
+    "body": "<ul><li>Email:aforman@gmail.com</li><li>Phone:(206) 123-4567</li><li><a href='https://twitter.com/JeremyClarkson?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor' target='_blank'><img src='images/twitter_followers.png'> AliForman@PerfectMay</img></a></li></ul>",
+    "image": "<span>/images/rainier1.jpeg</span><span>/images/Aristotle.jpeg</span><span>/images/Renoir1.jpeg</span>"
+  }
+]

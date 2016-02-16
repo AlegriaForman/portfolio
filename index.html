@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset='UTF-8'>
+    <title>Ali's portfolio</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="styles/vendor/normalize.css">
+    <link rel="stylesheet" href="styles/base.css">
+    <link rel="stylesheet" href="styles/layout.css">
+    <link href='https://fonts.googleapis.com/css?family=Poiret+One|Josefin+Slab' rel='stylesheet' type='text/css'>
+
+    <script id="portfolio-template" type="text/x-handlebars-template">
+      <article class="clearfix" data-name="{{name}}" data-body="{{{body}}}" data-image="{{image}}">
+        <p>{{{body}}}</p>
+        <div>{{images}}</div>
+      </article>
+    </script>
+
+  </head>
+  <body>
+    <header class="clearfix">
+     <section class="head">
+      <h1>Alegria "Ali" Forman || Full Stack Developer</h1>
+      <img id="pic" src="images/23.jpg" class="expand">
+     </section>
+    </header>
+
+<!--Main nav-->
+    <nav class="main-nav">
+      <div id="hamburger-bun"> <img id="burger" src="images/hamburger.png"></div>
+      <ul>
+        <li class="tab"><a href="#" id="my-about" data-value="About">About</a></li>
+        <li class="tab"><a href="#" id="my-skills" data-value="Skills">Skills</a></li>
+        <li class="tab"><span><a href="http://timali4man.com/gopherGame/start.html" target="_blank">Gopher Game  |  </a></span>
+          <span><a href="http://timali4man.com/MuseConcert.html" target="_blank">Muse Concert</a></span></li>
+        <li class="tab"><a href="https://github.com/AlegriaForman" target="_blank" id="my-github">GitHub</a></li>
+        <li class="tab"><a href="#" id="my-contact" data-value="Contact">Contact</a></li>
+      </ul>
+    </nav>
+<!--Template goes here-->
+    <p id="porfolioInformation"></p>
+
+    <footer>
+     <p>&copy;ali</p>
+    </footer>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.5/handlebars.min.js"></script>
+    <script src="scripts/portfolio.js"></script>
+    <script src="scripts/portfolioFunc.js"></script>
+    <script>Portfolio.fetchPortfolioInfo(contentView.initPortfolio);</script>
+  </body>
+</html>
