@@ -1,79 +1,53 @@
 (function(module){
-  var aboutArr = [];
-  var contactArr = [];
 
-  function Pics (opts) {
-    this.name = opts.name;
-    this.image = opts.image;
+  function Portfolio (opts) {
+    Object.keys(opts).forEach(function(e, index, keys) {
+      this[e] = opts[e];
+    },this);
   }
 
-  Pics.skillsPicture = [];
+  Portfolio.all = [];
 
-  Pics.prototype.aboutPics = function () {
-    var template = Handlebars.compile($('#about-template').text());
+  Portfolio.prototype.myPortfolio = function () {
+    var template = Handlebars.compile($('#portfolio-template').text());
       return template(this);
   };
 
-  Pics.prototype.skillsPics = function () {
-    var template = Handlebars.compile($('#skills-template').text());
-      return template(this);
-  };
-
-  Pics.prototype.contactPics = function () {
-    var template = Handlebars.compile($('#contact-template').text());
-      return template(this);
-  };
-
-  Pics.loadSkillsPics = function(rawData) {
-    Pics.skillsPicture = rawData.map(function(ele) {
-      return new Pics(ele);
-  });
-  };
-
-  Pics.getSkillsPics = function(){
-    $.getJSON('/scripts/skills.json', function(data){
-      localStorage.rawData = JSON.stringify(data);
-      Pics.loadSkillsPics(data);
-      contentView.initPortfolio();
+  Portfolio.loadAll  = function(rawData) {
+    Portfolio.all  = rawData.map(function(ele) {
+      return new Portfolio(ele);
     });
   };
 
-  Pics.fetchSkillsPics = function(){
-    if (localStorage.rawData) {
-      $.ajax ({
-        url: '/scripts/skills.json',
-        type: 'HEAD',
-        success: function(data, message, xhr){
-          console.log(xhr);
-          var eTag = xhr.getResponseHeader('eTag');{
-          if (!localStorage.eTag || eTag !== localStorage.eTag) {
-            localStorage.eTag = eTag;
-            localStorage.clear();
-          } else {}
-            Pics.loadSkillsPics(JSON.parse(localStorage.rawData));
-            contentView.initPortfolio();
-          }
+  Portfolio.getPortfolioInfo = function(){
+  $.getJSON('/scripts/portfolioInfo.json', function(data){
+    localStorage.rawData = JSON.stringify(data);
+    Portfolio.loadAll(data);
+    contentView.initPortfolio();
+  });
+};
+
+Portfolio.fetchPortfolioInfo = function(){
+  if (localStorage.rawData) {
+    $.ajax ({
+      url: '/scripts/portfolioInfo.json',
+      type: 'HEAD',
+      success: function(data, message, xhr){
+        console.log(xhr);
+        var eTag = xhr.getResponseHeader('eTag');{
+        if (!localStorage.eTag || eTag !== localStorage.eTag) {
+          localStorage.eTag = eTag;
+          localStorage.clear();
+        } else {}
+          Portfolio.loadAll(JSON.parse(localStorage.rawData));
+          contentView.initPortfolio();
         }
-      });
-  } else {
-    Pics.getSkillsPics();
-  }
-  };
+      }
+    });
+} else {
+  Portfolio.getPortfolioInfo();
+}
+};
 
-  aboutData.forEach(function(ele) {
-    aboutArr.push(new Pics(ele));
-  });
-
-  aboutArr.forEach(function (a) {
-    $('#about-div').append(a.aboutPics());
-  });
-
-  contactData.forEach(function(ele) {
-    contactArr.push(new Pics(ele));
-  });
-
-  contactArr.forEach(function (a) {
-    $('#contact-div').append(a.contactPics());
-  });
-  module.Pics = Pics;
+module.Portfolio = Portfolio;
 })(window);

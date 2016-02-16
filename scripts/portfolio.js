@@ -2,42 +2,18 @@
   contentView = {};
 
   contentView.initPortfolio = function(){
-    Pics.skillsPicture.forEach(function(a){
-        $('#skills-div').append(a.skillsPics());
+    $('.tab').on('click', function() {
+      //e.preventDefault();
+      var value = $(this).text();
+      console.log($(this).text());
+      Portfolio.all.forEach(function(a) {
+        if(value == a.name) {
+          console.log(a.name);
+          $('#portfolioInformation').append(Portfolio.all);
+          console.log(Portfolio.all);
+          }
+        });
     });
   };
-
-  $('#about-div').hide();
-  $('#skills-div').hide();
-  $('#contact-div').hide();
-  $('#about').hide();
-  $('#skills').hide();
-  $('#contact').hide();
-  
-  $('#my-about').on('click', function() {
-    $('#skills').hide();
-    $('#contact').hide();
-    $('#about').fadeIn();
-    $('#skills-div').hide();
-    $('#contact-div').hide();
-    $('#about-div').fadeIn();
-  });
-
-  $('#my-skills').on('click', function() {
-    $('#about').hide();
-    $('#contact').hide();
-    $('#skills').fadeIn();
-    $('#about-div').hide();
-    $('#contact-div').hide();
-    $('#skills-div').fadeIn();
-  });
-
-  $('#my-contact').on('click', function() {
-    $('#about').hide();
-    $('#skills').hide();
-    $('#contact').fadeIn();
-    $('#about-div').hide();
-    $('#skills-div').hide();
-    $('#contact-div').fadeIn();
-  });
+module.contentView = contentView;
 })(window);
