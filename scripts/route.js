@@ -1,5 +1,5 @@
 page('/', startController.index);
-page('/skills', skillsController.index);
+page('/skills', repoView.index);
 page('/about', aboutController.index);
 page('/contact', contactController.index);
 
