@@ -9,10 +9,10 @@
   };
 
   var render = function(repo) {
-    return $('<li>').html('<a href="' + repo.html_url + '">' + repo.name + '</a>');
+    return $('<li>').html('<a href="' + repo.html_url + '" target="_blank"> '+ repo.name + '</a>');
   };
 
-  repoView.index = function() {
+  repoView.index = function(ctx,next) {
     ui();
     $('#skills ul').append(
       repos.with('name').map(render)

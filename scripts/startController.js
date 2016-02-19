@@ -1,7 +1,7 @@
 (function(module) {
   var startController = {};
 
-  startController.index = function() {
+  startController.index = function(ctx, next) {
     $('main').children().hide();
   };
 
