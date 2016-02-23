@@ -1,0 +1,127 @@
+body {
+  background-color: black;
+  font-family: 'Josefin Slab', serif;
+  color: white;
+}
+
+header {
+  margin: 0;
+  text-align: center;
+  color: white;
+}
+p {
+  padding: 10px 20px 0 20px;
+  font-size: 1.1em;
+}
+
+.tab {
+  list-style-type: none;
+  display: inline-block;
+}
+
+h1 {
+  text-align: center;
+  font-size: 120%;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+  font-size: .8em;
+}
+
+.clearfix {
+  clear: both;
+}
+
+div>img {
+  margin-left: 35%;
+  width: 30%;
+  height: auto;
+}
+footer {
+  font-size: 1.5em;
+}
+
+#burger {
+  font-size: 200px;
+  position: absolute;
+}
+
+#pic {
+  align-items: center;
+  border-radius: 35px;
+}
+#pic.expand {
+  width: 6.5em;
+}
+
+ul {
+  padding: 0;
+  list-style: none;
+  text-align: center;
+}
+
+.main-nav li {
+    font-size: 1.5em;
+    padding: .2em .2em;
+}
+/*phones (portrait and landscape) -----------
+@media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+header {
+  text-align: center;
+  color: black;
+}
+h1 {
+  font-size: 2.8em;
+}
+
+nav {
+  list-style-type: none;
+}
+body {
+  background-image: url('images/background2.png');
+  background-repeat: no-repeat;
+  background-position: 400px 900px;
+  background-size: 20%;
+}
+li {
+  color: white;
+  font-size: 1em;
+  padding: 0;
+}
+p #skills #contact {
+  font-size: .8em;
+  padding-top: 10px;
+}
+}
+
+/* tablet (portrait and landscape) -----------
+@media only screen and (min-device-width : 481px) and (max-device-width : 767px) {
+header {
+  text-align: center;
+  color: black;
+}
+h1 {
+  font-size: 2.8em;
+}
+
+nav {
+  list-style-type: none;
+}
+body {
+  background-image: url('images/background2.png');
+  background-repeat: no-repeat;
+  background-position: 400px 900px;
+  background-size: 20%;
+}
+li {
+  color: white;
+  font-size: 1.5em;
+  padding: 0;
+}
+p #skills #contact {
+  font-size: 1.5em;
+  padding-top: 10px;
+}
+}
