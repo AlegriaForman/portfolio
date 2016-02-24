@@ -1,0 +1,165 @@
+body {
+  background-color: black;
+  font-family: 'Josefin Slab', serif;
+  color: white;
+}
+
+header {
+  margin: 0;
+  text-align: center;
+  color: white;
+}
+
+p {
+  padding: 10px 20px 0 20px;
+  font-size: 1.1em;
+}
+
+h1 {
+  text-align: center;
+  font-size: 120%;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+  font-size: .8em;
+}
+
+footer {
+  font-size: 1.5em;
+  position: 400px 200px;
+}
+
+ul {
+  padding: 0;
+  list-style: none;
+  text-align: center;
+}
+
+.clearfix {
+  clear: both;
+}
+
+.main-nav li {
+  display: block;
+  font-size: 1.5em;
+  padding: .2em .2em;
+}
+
+.main-nav ul {
+  display: none;
+}
+
+.main-nav:hover ul {
+  display: block;
+  padding: 0;
+  list-style: none;
+}
+
+#pic {
+  align-items: center;
+  border-radius: 35px;
+  outline: solid 2px yellow;
+}
+
+#pic.expand {
+  width: 6.5em;
+}
+
+#hamburger-bun {
+  position: absolute;
+  z-index: 99999;
+  top: 0;
+  width: 60px;
+  right: 5px;
+  top: 140px;
+  outline: 2px white;
+}
+
+#burger {
+  padding: 0 0 80px 0;
+}
+
+span > img {
+  display: inline;
+  margin: 0;
+  width: 50px;
+  height: auto;
+}
+
+@media only screen and (min-width: 320px) {
+  .main-nav ul {
+    display: inline-block;
+    padding: 0;
+    margin: 0;
+  }
+  .main-nav li {
+    display: inline;
+    font-size: 1.5em;
+  }
+
+  #hamburger-bun {
+    display: none;
+  }
+
+  span > img {
+    align-items: center;
+    display: inline;
+    margin: 0;
+    width: 80px;
+    height: auto;
+  }
+}
+
+@media only screen and (min-width: 640px) {
+  .main-nav ul {
+    display: inline-block;
+    padding: 0;
+    margin: 0;
+  }
+  .main-nav li {
+    display: inline;
+    font-size: 1.5em;
+  }
+
+  #hamburger-bun {
+    display: none;
+  }
+
+  span > img {
+    align-items: center;
+    display: inline;
+    margin: 0;
+    width: 180px;
+    height: auto;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+
+  .main-nav ul {
+    display: block;
+    padding: 0;
+    margin: 0;
+  }
+  .main-nav li {
+    display: inline-block;
+    font-size: 1.5em;
+    padding-left: .6em;
+    border: solid;
+    margin: 0 1px 0 0;
+  }
+
+  .main-nav li a {
+    padding: 0 2px;
+  }
+
+  span > img {
+    align-items: center;
+    display: inline;
+    margin: 0;
+    width: 240px;
+    height: auto;
+  }
+}
